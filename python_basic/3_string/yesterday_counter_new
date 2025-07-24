@@ -1,0 +1,13 @@
+yesterday_lyric = ""
+with open("yesterday.txt", "r") as f: # Using 'with' statement is better for file handling
+for line in f:
+yesterday_lyric += line.strip() + "\n"
+
+# Convert the entire lyric string to lowercase to count all instances
+all_lowercase_lyrics = yesterday_lyric.lower()
+
+# Now, count "yesterday" in the entirely lowercase string
+# This will capture "Yesterday", "yesterday", and "YESTERDAY" correctly
+n_of_yesterday = all_lowercase_lyrics.count("yesterday")
+
+print("Number of a Word 'Yesterday'", n_of_yesterday)

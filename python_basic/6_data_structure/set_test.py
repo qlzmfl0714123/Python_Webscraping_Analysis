@@ -1,0 +1,27 @@
+#set : 값을 중복을 허용하지 않는 자료형
+
+s1 = set([10,20,1,2,3,4,1,2,5])
+print(type(s1))
+print(s1)
+s1.add(5)
+print(s1)
+s1.remove(2)
+print(s1)
+#TypeError: 'set' object does not support indexing
+#print(s1[3])
+s2 = set([40,30,1,2,5,7,8])
+print('합집합')
+result = set(s1.union(s2))
+print(result)
+print(s1 | s2)
+print('교집합')
+print(s1.intersection(s2))
+print(s1 & s2)
+print('차집합')
+print(s1.difference(s2))
+print(s1 - s2)
+
+myset = set(['a','b','a','c'])
+myset2 = set(['가방','나','가방','라'])
+print(myset)
+print(myset2)
